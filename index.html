@@ -61,10 +61,7 @@ nav .liens .bouton{padding:10px 16px;font-size:14.5px;color:#fff}
 .tel{position:relative;width:290px;border-radius:42px;background:#0E0E10;padding:11px;box-shadow:0 40px 80px -30px rgba(20,20,22,.55),0 0 0 1px rgba(255,255,255,.06) inset;transform:rotate(-3deg)}
 .ecran{border-radius:32px;overflow:hidden;background:#FBF8F3;height:560px;position:relative}
 .ecran .encoche{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:84px;height:24px;border-radius:20px;background:#0E0E10;z-index:3}
-.demo-photo{height:230px;background:
-  radial-gradient(circle at 30% 35%,rgba(255,255,255,.35),transparent 40%),
-  linear-gradient(135deg,#8C5A3C,#C9926A 55%,#5C3A28);position:relative}
-.demo-photo::after{content:"";position:absolute;left:18%;right:18%;bottom:22px;height:70px;border-radius:18px 18px 8px 8px;background:linear-gradient(180deg,#2F4A3C,#1F3329);box-shadow:0 -14px 0 -6px #36574A}
+.demo-photo{height:230px;background:url(img/tapissier-tel.jpg) center/cover;position:relative}
 .demo-corps{padding:18px 18px 0}
 .demo-nom{font-family:"Space Grotesk";font-weight:700;font-size:23px;letter-spacing:-.02em}
 .demo-metier{font-size:12.5px;color:#7A6B5E;margin-top:2px}
@@ -106,13 +103,13 @@ nav .liens .bouton{padding:10px 16px;font-size:14.5px;color:#fff}
 /* EXEMPLES */
 .exemples{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
 .ex{border-radius:var(--rayon);overflow:hidden;border:1px solid var(--trait);background:var(--carte)}
-.ex .apercu{height:200px;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;position:relative}
+.ex .apercu{height:240px;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;position:relative}
 .ex .apercu small{font-family:"JetBrains Mono";font-size:11px;opacity:.85;letter-spacing:.06em;text-transform:uppercase}
 .ex .apercu strong{font-family:"Space Grotesk";font-size:26px;letter-spacing:-.02em;line-height:1.1}
 .ex .bas{padding:16px 20px;display:flex;justify-content:space-between;font-size:14px;color:var(--doux)}
-.a1{background:linear-gradient(160deg,rgba(0,0,0,.05),rgba(0,0,0,.55)),linear-gradient(135deg,#C98B4B,#7A4A23)}
-.a2{background:linear-gradient(160deg,rgba(0,0,0,.05),rgba(0,0,0,.55)),linear-gradient(135deg,#D9A3B5,#6E3C5A)}
-.a3{background:linear-gradient(160deg,rgba(0,0,0,.05),rgba(0,0,0,.55)),linear-gradient(135deg,#6E8F7A,#25403A)}
+.a1{background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.65)),url(img/boulangerie.jpg) center/cover}
+.a2{background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.65)),url(img/coiffure.jpg) center/cover}
+.a3{background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.65)),url(img/tapissier.jpg) center/cover}
 .note-ex{margin-top:14px;font-size:13.5px;color:var(--doux)}
 
 /* TARIFS */
@@ -275,10 +272,10 @@ footer img{height:26px;opacity:.85}
     <h2 class="monte">Chaque site ressemble à son commerce.</h2>
     <div class="exemples">
       <div class="ex monte"><div class="apercu a1"><small>Boulangerie</small><strong>Le Fournil<br>du Marché</strong></div><div class="bas"><span>Chaleureux</span><span>Horaires · Commande</span></div></div>
-      <div class="ex monte"><div class="apercu a2"><small>Coiffure</small><strong>Salon<br>Rose Thé</strong></div><div class="bas"><span>Élégant</span><span>Prestations · RDV</span></div></div>
+      <div class="ex monte"><div class="apercu a2"><small>Coiffure · Barbier</small><strong>Salon<br>Le Comptoir</strong></div><div class="bas"><span>Élégant</span><span>Prestations · RDV</span></div></div>
       <div class="ex monte"><div class="apercu a3"><small>Artisan</small><strong>Atelier<br>Lucien</strong></div><div class="bas"><span>Sobre</span><span>Galerie · Devis</span></div></div>
     </div>
-    <p class="note-ex monte">Commerces imaginaires, pour montrer le style. Votre maquette est faite avec vos vraies informations.</p>
+    <p class="note-ex monte">Commerces imaginaires et photos d'illustration, pour montrer le style. Votre site est fait avec vos vraies informations et vos photos.</p>
   </div>
 </section>
 
