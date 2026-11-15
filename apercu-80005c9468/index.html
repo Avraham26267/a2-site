@@ -155,6 +155,16 @@
   .relais p{margin-top:0;font-size:15px}
   .relais small{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--or);font-weight:600}
 
+  /* ===== Réalisations ===== */
+  .realisations{background:var(--noir);color:var(--ivoire)}
+  .realisations .lien{color:var(--ivoire)}
+  .videos{display:grid;grid-template-columns:repeat(2,minmax(0,340px));justify-content:center;gap:56px;margin-top:70px}
+  .videos figure{margin:0}
+  .cadre-video{position:relative;aspect-ratio:9/16;background:var(--noir-2)}
+  .cadre-video::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--or)}
+  .cadre-video video{position:relative;width:100%;height:100%;object-fit:cover;display:block}
+  .videos figcaption{margin-top:22px;text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--or-clair)}
+
   /* ===== Étapes ===== */
   .trois{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:80px;border-top:1px solid var(--ligne)}
   .trois li{padding:54px 44px 10px;position:relative}
@@ -285,6 +295,9 @@
     .liste a{padding:22px 0}
     .liste h3{font-size:28px}
     .tarifs .btn,.etapes .btn{width:100%}
+    .videos{grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+    .cadre-video::before{inset:-8px 8px 8px -8px}
+    .videos figcaption{font-size:16px;margin-top:14px}
     .trois{margin-top:30px}
     .trois li{padding:28px 0 22px;display:grid;grid-template-columns:52px 1fr;column-gap:8px}
     .trois .chiffre{font-size:40px;grid-row:span 2}
@@ -383,6 +396,20 @@
           <svg class="fleche" viewBox="0 0 22 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h20M16 1l4 4-4 4"/></svg></a>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="realisations" id="realisations">
+  <div class="wrap">
+    <div class="rev" style="text-align:center">
+      <p class="eyebrow">Nos réalisations</p>
+      <h2 style="margin-top:26px">Fait au salon, <em>en vrai.</em></h2>
+    </div>
+    <div class="videos">
+      <figure class="rev"><div class="cadre-video"><video src="video/realisation-1.mp4" poster="video/realisation-1.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Perruque longue aux grandes ondulations"></video></div><figcaption>Perruque · ondulations</figcaption></figure>
+      <figure class="rev d1"><div class="cadre-video"><video src="video/realisation-2.mp4" poster="video/realisation-2.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Coiffure plaquée avec baby hair"></video></div><figcaption>Coiffure plaquée · baby hair</figcaption></figure>
+    </div>
+    <div class="rev" style="text-align:center;margin-top:50px"><a class="lien" href="https://www.instagram.com/oghaircastle1/" target="_blank" rel="noopener">Plus de réalisations sur Instagram</a></div>
   </div>
 </section>
 
@@ -496,7 +523,7 @@
         <div><h4>Directeur de la publication</h4>Confidence Osazuwa</div>
         <div><h4>Hébergement</h4>Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis</div>
         <div><h4>Conception</h4>A2</div>
-        <div><h4>Photos</h4>Les photos de ce site sont des images d'illustration.</div>
+        <div><h4>Photos et vidéos</h4>Les photos de ce site sont des images d'illustration. Les vidéos de la partie « Nos réalisations » sont des réalisations du salon.</div>
         <div><h4>Données personnelles</h4>Ce site ne dépose pas de cookie publicitaire et ne contient aucun formulaire. Les messages envoyés via WhatsApp sont traités uniquement pour répondre à votre demande de rendez-vous. La carte est fournie par OpenStreetMap.</div>
       </div>
     </details>
