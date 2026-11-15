@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OG Hair Castle · Salon & boutique capillaire à Nantes</title>
+<meta name="description" content="OG Hair Castle, salon et boutique capillaire au 1 rue Belle-Image à Nantes : perruques, mèches, pose, tissage et tresses. Femmes et hommes. Du lundi au samedi, 10 h – 19 h.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0E0D0C">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivoire:#F6F1E9;
+    --creme:#ECE4D6;
+    --noir:#0E0D0C;
+    --noir-2:#1A1816;
+    --encre:#171513;
+    --gris:#77706A;
+    --or:#C2A06A;
+    --or-fonce:#A6844F;
+    --or-clair:#E3CFA6;
+    --ligne:rgba(23,21,19,.12);
+    --ligne-or:rgba(194,160,106,.28);
+    --serif:"Cormorant Garamond", Georgia, serif;
+    --sans:"Manrope", system-ui, -apple-system, sans-serif;
+    --ease:cubic-bezier(.22,.8,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ivoire);color:var(--encre);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+  .eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--or);font-weight:600}
+  .eyebrow::before{content:"";width:34px;height:1px;background:currentColor}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1;letter-spacing:-.015em}
+  h2{font-size:clamp(44px,6vw,84px)}
+  h2 em,h1 em{font-style:italic;font-weight:300;color:var(--or)}
+  .grain{position:relative;isolation:isolate}
+  .grain::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.07;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  /* ===== Boutons ===== */
+  .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:16px;height:60px;padding:0 34px;
+       font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;overflow:hidden;isolation:isolate;
+       transition:color .5s var(--ease), border-color .5s var(--ease)}
+  .btn::before{content:"";position:absolute;inset:0;z-index:-1;transform:scaleX(0);transform-origin:right;transition:transform .6s var(--ease)}
+  .btn:hover::before{transform:scaleX(1);transform-origin:left}
+  .btn .fleche{width:22px;height:10px;transition:transform .5s var(--ease)}
+  .btn:hover .fleche{transform:translateX(6px)}
+  .btn-or{background:var(--or);color:var(--noir)}
+  .btn-or::before{background:var(--ivoire)}
+  .btn-or.sur-clair::before{background:var(--noir)}
+  .btn-or.sur-clair:hover{color:var(--ivoire)}
+  .btn-cadre{border:1px solid var(--ligne-or);color:var(--ivoire)}
+  .btn-cadre::before{background:var(--or)}
+  .btn-cadre:hover{color:var(--noir);border-color:var(--or)}
+  .lien{display:inline-flex;align-items:center;gap:16px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+  .lien::before{content:"";width:40px;height:1px;background:var(--or);transition:width .5s var(--ease)}
+  .lien:hover::before{width:64px}
+
+  /* ===== En-tête ===== */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;color:var(--ivoire);transition:background .5s, color .5s, border-color .5s;border-bottom:1px solid transparent}
+  header.plein{background:rgba(246,241,233,.94);color:var(--encre);border-color:var(--ligne);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:88px;transition:height .5s}
+  header.plein .nav{height:72px}
+  .logo{display:flex;align-items:baseline;gap:8px;font-family:var(--serif);font-size:25px;letter-spacing:.04em}
+  .logo b{font-weight:500;font-size:30px;letter-spacing:.02em}
+  .logo i{color:var(--or);font-weight:300}
+  .nav ul{display:flex;gap:44px;list-style:none;font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase}
+  .nav ul a{position:relative;padding:6px 0}
+  .nav ul a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--or);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+  .nav ul a:hover::after{transform:scaleX(1);transform-origin:left}
+  .nav .btn{height:46px;padding:0 24px;font-size:11px}
+
+  /* ===== Héros ===== */
+  .hero{position:relative;min-height:100vh;min-height:100svh;background:var(--noir);color:var(--ivoire);display:flex;flex-direction:column;overflow:hidden}
+  .hero-img{position:absolute;top:0;right:0;bottom:0;width:52%;overflow:hidden}
+  .hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 22%;transform:scale(1.08);animation:zoom 2.4s var(--ease) forwards}
+  .hero-img::after{content:"";position:absolute;inset:-2px;background:
+     linear-gradient(90deg,var(--noir) 0%,var(--noir) 4%,rgba(14,13,12,.82) 16%,rgba(14,13,12,.4) 34%,rgba(14,13,12,0) 60%),
+     linear-gradient(180deg,rgba(14,13,12,.6) 0%,rgba(14,13,12,0) 22%),
+     linear-gradient(0deg,rgba(14,13,12,.9) 0%,rgba(14,13,12,0) 32%)}
+  .hero.grain::after{z-index:1}
+  .hero > .wrap,.hero-infos{z-index:2}
+  @keyframes zoom{to{transform:scale(1)}}
+  .hero > .wrap{position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;width:100%;padding-top:130px;padding-bottom:60px}
+  .hero h1{font-size:clamp(56px,7.4vw,124px);line-height:.98;margin:30px 0 34px;max-width:50%}  .ligne-titre{display:block;overflow:hidden;padding:0 .12em .1em 0;margin-right:-.12em}
+  .ligne-titre > span{display:inline-block}
+  .js .ligne-titre > span{transform:translateY(105%);animation:monte 1.3s var(--ease) forwards}
+  .ligne-titre:nth-child(2) > span{animation-delay:.12s}
+  .ligne-titre:nth-child(3) > span{animation-delay:.24s}
+  @keyframes monte{to{transform:none}}
+  .js .fondu{opacity:0;animation:apparait 1.2s var(--ease) .6s forwards}
+  .js .fondu.d2{animation-delay:.8s}
+  @keyframes apparait{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .hero p.lead{font-size:18px;color:rgba(246,241,233,.72);max-width:430px;margin-bottom:46px}
+  .hero .actions{display:flex;flex-wrap:wrap;gap:16px}
+  .hero-infos{position:relative;border-top:1px solid rgba(194,160,106,.22)}
+  .hero-infos dl{display:grid;grid-template-columns:repeat(3,1fr)}
+  .hero-infos div{padding:28px 0}
+  .hero-infos div+div{padding-left:36px;border-left:1px solid rgba(194,160,106,.22)}
+  .hero-infos dt{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--or);margin-bottom:6px;font-weight:600}
+  .hero-infos dd{font-family:var(--serif);font-size:22px;line-height:1.3}
+  .ouvert{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:12px;margin-left:12px;color:rgba(246,241,233,.6);vertical-align:middle}
+  .ouvert i{width:7px;height:7px;border-radius:50%;background:#7A736C}
+  .ouvert.oui i{background:#8FD18A;box-shadow:0 0 0 4px rgba(143,209,138,.16)}
+
+  section{padding:150px 0}
+
+  /* ===== Manifeste ===== */
+  .manifeste{text-align:center;overflow:hidden;position:relative}
+  .manifeste .monogramme{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--serif);font-size:clamp(260px,38vw,560px);font-weight:300;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(194,160,106,.22);pointer-events:none;user-select:none;letter-spacing:-.04em}
+  .manifeste .wrap{position:relative}
+  .manifeste h2{font-size:clamp(40px,5.2vw,72px);max-width:960px;margin:34px auto 0;line-height:1.08}
+  .manifeste p{font-size:18px;color:var(--gris);margin:34px auto 0;max-width:560px}
+  .ornement{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:46px;color:var(--or)}
+  .ornement::before,.ornement::after{content:"";width:60px;height:1px;background:var(--ligne-or)}
+
+  /* ===== Prestations ===== */
+  .prestations{background:var(--creme);}
+  .prestations .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:110px;align-items:start}
+  .cadre{position:relative}
+  .cadre::before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1px solid var(--or);z-index:0}
+  .cadre img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover}
+  .prestations .cadre{position:sticky;top:110px}
+  .liste{list-style:none;margin-top:54px;border-top:1px solid var(--ligne);counter-reset:n}
+  .liste li{border-bottom:1px solid var(--ligne)}
+  .liste a{display:grid;grid-template-columns:56px 1fr auto;align-items:center;gap:10px;padding:30px 0;transition:padding .5s var(--ease)}
+  .liste a:hover{padding-left:14px}
+  .liste .n{font-family:var(--serif);font-style:italic;color:var(--or);font-size:18px}
+  .liste h3{font-size:clamp(32px,3.4vw,44px);transition:color .4s}
+  .liste p{color:var(--gris);font-size:15px;margin-top:6px;font-family:var(--sans)}
+  .liste .go{width:44px;height:44px;border-radius:50%;border:1px solid var(--ligne);display:grid;place-items:center;transition:all .5s var(--ease)}
+  .liste .go svg{width:16px;height:16px;transition:transform .5s var(--ease)}
+  .liste a:hover .go{background:var(--noir);border-color:var(--noir);color:var(--or)}
+  .liste a:hover .go svg{transform:rotate(-45deg)}
+  .liste a:hover h3{color:var(--or-fonce)}
+  .tarifs{margin-top:36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .tarifs p{color:var(--gris);font-size:15px;max-width:330px}
+
+  /* ===== Boutique ===== */
+  .boutique{background:var(--noir);color:var(--ivoire)}
+  .boutique .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:110px;align-items:center}
+  .boutique .cadre::before{inset:-18px -18px 18px 18px}
+  .boutique p{color:rgba(246,241,233,.7);max-width:440px;margin-top:30px;font-size:17px}
+  .puces{list-style:none;margin-top:34px;display:grid;gap:14px}
+  .puces li{display:flex;align-items:center;gap:14px;font-size:15px;color:rgba(246,241,233,.85)}
+  .puces li::before{content:"";width:6px;height:6px;transform:rotate(45deg);background:var(--or)}
+  .relais{margin-top:56px;padding:34px 36px;border:1px solid var(--ligne-or);display:grid;gap:8px}
+  .relais h3{font-size:30px}
+  .relais p{margin-top:0;font-size:15px}
+  .relais small{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--or);font-weight:600}
+
+  /* ===== Étapes ===== */
+  .trois{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:80px;border-top:1px solid var(--ligne)}
+  .trois li{padding:54px 44px 10px;position:relative}
+  .trois li+li{border-left:1px solid var(--ligne)}
+  .trois .chiffre{display:block;font-family:var(--serif);font-size:64px;font-weight:300;line-height:1;color:var(--or)}
+  .trois h3{font-size:34px;margin:26px 0 14px}
+  .trois p{color:var(--gris);font-size:15px;max-width:300px}
+  .rev.d2{transition-delay:.24s}
+
+  /* ===== Instagram ===== */
+  .insta{background:var(--creme);text-align:center;padding:120px 0}
+  .insta .pseudo{display:block;font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(46px,8vw,120px);line-height:1.1;margin:24px 0 18px;transition:color .4s}
+  .insta .pseudo:hover{color:var(--or-fonce)}
+  .insta p{color:var(--gris);margin-bottom:30px}
+
+  /* ===== FAQ ===== */
+  .faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;align-items:start}
+  .questions{border-top:1px solid var(--ligne)}
+  .questions details{border-bottom:1px solid var(--ligne)}
+  .questions summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:28px 0;font-family:var(--serif);font-size:26px;line-height:1.2}
+  .questions summary::-webkit-details-marker{display:none}
+  .questions summary::after{content:"+";flex:none;width:38px;height:38px;border:1px solid var(--ligne);border-radius:50%;display:grid;place-items:center;font-family:var(--sans);font-size:18px;font-weight:300;color:var(--or-fonce);transition:transform .4s var(--ease), background .4s}
+  .questions details[open] summary::after{transform:rotate(45deg);background:var(--noir);color:var(--or);border-color:var(--noir)}
+  .questions p{color:var(--gris);padding:0 60px 28px 0;font-size:16px}
+  .petit{margin-top:14px;font-size:13px;color:var(--gris)}
+
+  /* ===== Infos ===== */
+  .infos .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:stretch}
+  .horaires{margin-top:46px;border-top:1px solid var(--ligne)}
+  .horaires li{list-style:none;display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--ligne);font-size:15px}
+  .horaires li span:first-child{font-family:var(--serif);font-size:21px}
+  .horaires li.auj span{color:var(--or-fonce);font-weight:600}
+  .horaires li span:last-child{font-variant-numeric:tabular-nums;color:var(--gris)}
+  .horaires li.auj span:last-child{color:var(--or-fonce)}
+  .adresse{margin-top:40px;font-family:var(--serif);font-size:30px;line-height:1.25}
+  .adresse + .lien{margin-top:18px}
+  .carte-plan{position:relative;min-height:480px}
+  .carte-plan::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--or)}
+  .carte-plan iframe{position:relative;width:100%;height:100%;min-height:480px;border:0;display:block;filter:saturate(.9)}
+
+  /* ===== Contact ===== */
+  .contact{background:var(--noir);color:var(--ivoire);text-align:center;overflow:hidden;position:relative}
+  .contact::before{content:"";position:absolute;left:50%;top:0;width:900px;height:900px;transform:translate(-50%,-55%);border-radius:50%;background:radial-gradient(circle, rgba(194,160,106,.18), transparent 65%)}
+  .contact .wrap{position:relative}
+  .contact h2{font-size:clamp(56px,9vw,140px);margin:30px 0 30px}
+  .contact p{color:rgba(246,241,233,.68);max-width:480px;margin:0 auto 50px;font-size:18px}
+  .contact .actions{display:flex;justify-content:center;flex-wrap:wrap;gap:16px}
+  .reseaux{margin-top:56px;display:flex;justify-content:center;gap:40px;flex-wrap:wrap;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:rgba(246,241,233,.6)}
+  .reseaux a{transition:color .3s}
+  .reseaux a:hover{color:var(--or)}
+
+  /* ===== Mentions ===== */
+  .mentions{padding:70px 0;background:var(--noir-2);color:rgba(246,241,233,.75)}
+  .mentions details{max-width:760px;margin:0 auto}
+  .mentions summary{cursor:pointer;list-style:none;font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;color:var(--ivoire)}
+  .mentions summary::-webkit-details-marker{display:none}
+  .mentions summary::after{content:"+";color:var(--or);font-size:22px;font-weight:300;transition:transform .4s}
+  .mentions details[open] summary::after{transform:rotate(45deg)}
+  .mentions .texte{margin-top:30px;font-size:14px;display:grid;gap:20px}
+  .mentions h4{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--or);margin-bottom:4px}
+
+  footer{background:var(--noir);color:rgba(246,241,233,.5);font-size:12px;padding:36px 0;border-top:1px solid rgba(194,160,106,.14)}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer .logo{color:var(--ivoire);font-size:20px}
+  footer .logo b{font-size:22px}
+  footer a:hover{color:var(--or)}
+
+  /* ===== WhatsApp flottant (mobile) ===== */
+  .flottant{display:none;position:fixed;right:16px;bottom:16px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--or);color:var(--noir);align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(0,0,0,.3)}
+  .flottant svg{width:26px;height:26px}
+
+  /* ===== Apparitions ===== */
+  .js .rev{opacity:0;transform:translateY(40px);transition:opacity 1.1s var(--ease), transform 1.1s var(--ease)}
+  .js .rev.vu{opacity:1;transform:none}
+  .rev.d1{transition-delay:.12s}
+  .js .devoile{clip-path:inset(0 0 100% 0);transition:clip-path 1.4s var(--ease)}
+  .js .devoile.vu{clip-path:inset(0 0 0 0)}
+  @media (prefers-reduced-motion:reduce){
+    .rev,.devoile,.fondu,.ligne-titre>span,.hero-img img{opacity:1!important;transform:none!important;clip-path:none!important;animation:none!important}
+  }
+
+  @media (max-width:980px){
+    .nav ul{display:none}
+    /* Héros téléphone : photo en haut, texte dessous */
+    .hero{min-height:0;display:block}
+    .hero-img{position:relative;width:100%;height:68vh;height:68svh;max-height:640px}
+    .hero-img img{object-position:center 18%}
+    .hero-img::after{background:
+       linear-gradient(180deg,rgba(14,13,12,.55) 0%,rgba(14,13,12,0) 22%),
+       linear-gradient(0deg,var(--noir) 2%,rgba(14,13,12,.75) 22%,rgba(14,13,12,0) 50%)}
+    .hero > .wrap{margin-top:-150px;padding-top:0;padding-bottom:44px}
+    .hero h1{max-width:none;font-size:clamp(50px,14vw,96px);margin:20px 0 22px}
+    .hero p.lead{font-size:16px;margin-bottom:30px}
+    .manifeste .monogramme{display:none}
+    .prestations .wrap,.boutique .wrap,.infos .wrap,.faq .wrap{grid-template-columns:1fr;gap:56px}
+    .trois{grid-template-columns:1fr;margin-top:50px}
+    .trois li{padding:40px 0 30px}
+    .trois li+li{border-left:0;border-top:1px solid var(--ligne)}
+    .questions summary{font-size:22px}
+    .questions p{padding-right:0}
+    .prestations .cadre{position:relative;top:0}
+    .boutique .cadre{order:-1}
+    section{padding:96px 0}
+    .flottant{display:flex}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 20px}
+    .nav{height:72px}
+    .nav .btn{display:none}
+    .hero .actions{gap:12px}
+    .hero .actions .btn{width:100%;height:56px}
+    .hero-infos dl{grid-template-columns:1fr;padding-top:6px;padding-bottom:10px}
+    .hero-infos div{padding:12px 0;display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+    .hero-infos div+div{padding-left:0;border-left:0;border-top:1px solid rgba(194,160,106,.14)}
+    .hero-infos dt{margin:0;flex:none}
+    .hero-infos dd{font-size:17px;text-align:right}
+    .ouvert{display:flex;justify-content:flex-end;margin:4px 0 0}
+    section{padding:76px 0}
+    .manifeste{padding:84px 0}
+    h2{font-size:clamp(38px,10.5vw,52px);line-height:1.05}
+    .manifeste h2{font-size:clamp(34px,9.4vw,46px)}
+    .manifeste p,.boutique p{font-size:16px}
+    .eyebrow{letter-spacing:.26em;gap:10px}
+    .eyebrow::before{width:22px}
+    .prestations .wrap,.boutique .wrap,.infos .wrap,.faq .wrap{gap:44px}
+    .cadre img{aspect-ratio:1/1}
+    .liste{margin-top:34px}
+    .liste a{padding:22px 0}
+    .liste h3{font-size:28px}
+    .tarifs .btn,.etapes .btn{width:100%}
+    .trois{margin-top:30px}
+    .trois li{padding:28px 0 22px;display:grid;grid-template-columns:52px 1fr;column-gap:8px}
+    .trois .chiffre{font-size:40px;grid-row:span 2}
+    .trois h3{font-size:26px;margin:2px 0 8px}
+    .etapes .rev[style*="margin-top:64px"]{margin-top:34px!important}
+    .insta{padding:80px 0}
+    .insta .pseudo{font-size:11.5vw}
+    .adresse{font-size:26px;margin-top:30px}
+    .carte-plan,.carte-plan iframe{min-height:320px}
+    .questions summary{font-size:20px;padding:22px 0}
+    .questions summary::after{width:32px;height:32px}
+    .contact h2{font-size:clamp(46px,13vw,64px)}
+    .contact p{font-size:16px;margin-bottom:36px}
+    .reseaux{flex-direction:column;gap:14px;margin-top:40px}
+    footer .wrap{flex-direction:column;align-items:flex-start;gap:8px}
+    .flottant{width:52px;height:52px}
+    .cadre::before,.boutique .cadre::before{inset:-10px 10px 10px -10px}
+    .carte-plan::before{inset:10px -10px -10px 10px}
+    .liste a{grid-template-columns:40px 1fr auto}
+    .liste .go{width:38px;height:38px}
+    .relais{padding:28px 24px}
+    .contact .actions .btn{width:100%}
+    .reseaux{gap:22px}
+  }
+</style>
+</head>
+<body>
+
+<header id="entete">
+  <div class="wrap nav">
+    <a href="#" class="logo"><b>OG</b> Hair <i>Castle</i></a>
+    <nav aria-label="Menu">
+      <ul>
+        <li><a href="#prestations">Prestations</a></li>
+        <li><a href="#boutique">Boutique</a></li>
+        <li><a href="#infos">Accès</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-or js-wa" href="https://wa.me/33667288372">Rendez-vous</a>
+  </div>
+</header>
+
+<section class="hero grain" style="padding:0">
+  <div class="hero-img"><img src="img/portrait.jpg" alt="Femme aux longs cheveux bruns ondulés" fetchpriority="high"></div>
+  <div class="wrap">
+    <p class="eyebrow fondu">Salon & boutique capillaire · Nantes</p>
+    <h1>
+      <span class="ligne-titre"><span>Votre</span></span>
+      <span class="ligne-titre"><span>couronne,</span></span>
+      <span class="ligne-titre"><span><em>sur mesure.</em></span></span>
+    </h1>
+    <p class="lead fondu">Perruques, mèches, pose, tissage et tresses. Pour elle comme pour lui, au cœur de Nantes.</p>
+    <div class="actions fondu d2">
+      <a class="btn btn-or js-wa" href="https://wa.me/33667288372">Réserver sur WhatsApp
+        <svg class="fleche" viewBox="0 0 22 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h20M16 1l4 4-4 4"/></svg></a>
+      <a class="btn btn-cadre" href="#prestations">Découvrir</a>
+    </div>
+  </div>
+  <div class="hero-infos fondu d2">
+    <dl class="wrap">
+      <div><dt>Adresse</dt><dd>1 rue Belle-Image, Nantes</dd></div>
+      <div><dt>Horaires</dt><dd>Lun – Sam · 10 h – 19 h<span class="ouvert" id="ouvert"><i></i><b>…</b></span></dd></div>
+      <div><dt>Téléphone</dt><dd><a href="tel:+33667288372">06 67 28 83 72</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="manifeste">
+  <span class="monogramme" aria-hidden="true">OG</span>
+  <div class="wrap rev">
+    <p class="eyebrow">La maison</p>
+    <h2>Un salon et une boutique, <em>au même endroit.</em></h2>
+    <p>On vous coiffe et on vous équipe. Venez pour une pose, un tissage ou des tresses, et repartez avec la perruque ou les mèches qu'il vous faut. Femmes et hommes sont les bienvenus.</p>
+    <div class="ornement">✦</div>
+  </div>
+</section>
+
+<section class="prestations" id="prestations">
+  <div class="wrap">
+    <div class="cadre devoile"><img src="img/tresses.jpg" alt="Longues tresses vues de dos" loading="lazy"></div>
+    <div>
+      <div class="rev">
+        <p class="eyebrow">Prestations</p>
+        <h2 style="margin-top:26px">Ce qu'on fait <em>pour vous.</em></h2>
+      </div>
+      <ol class="liste rev d1">
+        <li><a class="js-wa" href="https://wa.me/33667288372"><span class="n">01</span><div><h3>Perruques</h3><p>Choix, pose et mise en forme, pour un rendu naturel.</p></div><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a></li>
+        <li><a class="js-wa" href="https://wa.me/33667288372"><span class="n">02</span><div><h3>Mèches</h3><p>Longueur, volume ou couleur en plus.</p></div><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a></li>
+        <li><a class="js-wa" href="https://wa.me/33667288372"><span class="n">03</span><div><h3>Pose</h3><p>Une pose soignée, pour une tenue qui dure.</p></div><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a></li>
+        <li><a class="js-wa" href="https://wa.me/33667288372"><span class="n">04</span><div><h3>Tissage</h3><p>Adapté à vos cheveux et à votre style.</p></div><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a></li>
+        <li><a class="js-wa" href="https://wa.me/33667288372"><span class="n">05</span><div><h3>Tresses</h3><p>Des plus simples aux plus travaillées.</p></div><span class="go"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 8h13M9 3l5 5-5 5"/></svg></span></a></li>
+      </ol>
+      <div class="tarifs rev">
+        <p>Tarifs sur demande. Envoyez une photo de ce que vous voulez, on vous répond avec le prix et un créneau.</p>
+        <a class="btn btn-or sur-clair js-wa" href="https://wa.me/33667288372">Demander un prix
+          <svg class="fleche" viewBox="0 0 22 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h20M16 1l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="etapes">
+  <div class="wrap">
+    <div class="rev" style="text-align:center">
+      <p class="eyebrow">Comment ça se passe</p>
+      <h2 style="margin-top:26px">Simple, <em>en trois temps.</em></h2>
+    </div>
+    <ol class="trois">
+      <li class="rev"><span class="chiffre">I</span><h3>Envoyez une photo</h3><p>Sur WhatsApp, montrez-nous la coiffure qui vous fait envie, ou décrivez-la simplement.</p></li>
+      <li class="rev d1"><span class="chiffre">II</span><h3>Recevez le prix</h3><p>On vous répond avec le tarif et un créneau qui vous arrange.</p></li>
+      <li class="rev d2"><span class="chiffre">III</span><h3>Venez au salon</h3><p>1 rue Belle-Image, à Nantes. On s'occupe du reste.</p></li>
+    </ol>
+    <div class="rev" style="text-align:center;margin-top:64px">
+      <a class="btn btn-or sur-clair js-wa" href="https://wa.me/33667288372">Envoyer ma photo
+        <svg class="fleche" viewBox="0 0 22 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h20M16 1l4 4-4 4"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="boutique grain" id="boutique">
+  <div class="wrap">
+    <div class="rev">
+      <p class="eyebrow">Boutique capillaire</p>
+      <h2 style="margin-top:26px">Perruques & mèches, <em>à emporter.</em></h2>
+      <p>Passez au salon pour voir et choisir vos perruques et vos mèches sur place. On vous conseille pour trouver ce qui vous va.</p>
+      <ul class="puces">
+        <li>Perruques</li>
+        <li>Mèches</li>
+        <li>Conseils sur place</li>
+      </ul>
+    </div>
+    <div class="cadre devoile"><img src="img/meches.jpg" alt="Trois mèches brunes nouées d'un ruban satiné" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="insta">
+  <div class="wrap rev">
+    <p class="eyebrow">Instagram</p>
+    <a class="pseudo" href="https://www.instagram.com/oghaircastle1/" target="_blank" rel="noopener">@oghaircastle1</a>
+    <p>Nos dernières coiffures, perruques et arrivages, c'est par ici.</p>
+    <a class="lien" href="https://www.instagram.com/oghaircastle1/" target="_blank" rel="noopener">Nous suivre</a>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <div class="rev">
+      <p class="eyebrow">Horaires & accès</p>
+      <h2 style="margin-top:26px">Venez <em>nous voir.</em></h2>
+      <ul class="horaires" id="horaires">
+        <li data-j="1"><span>Lundi</span><span>10:00 – 19:00</span></li>
+        <li data-j="2"><span>Mardi</span><span>10:00 – 19:00</span></li>
+        <li data-j="3"><span>Mercredi</span><span>10:00 – 19:00</span></li>
+        <li data-j="4"><span>Jeudi</span><span>10:00 – 19:00</span></li>
+        <li data-j="5"><span>Vendredi</span><span>10:00 – 19:00</span></li>
+        <li data-j="6"><span>Samedi</span><span>10:00 – 19:00</span></li>
+        <li data-j="0"><span>Dimanche</span><span>Fermé</span></li>
+      </ul>
+      <p class="adresse">1 rue Belle-Image<br>44000 Nantes</p>
+      <p class="petit">Point relais Pickup sur place (Colissimo, Chronopost, DPD).</p>
+      <a class="lien" href="https://www.google.com/maps/search/?api=1&query=1+rue+Belle-Image+44000+Nantes" target="_blank" rel="noopener">Itinéraire</a>
+    </div>
+    <div class="carte-plan rev d1">
+      <iframe title="Plan : OG Hair Castle, 1 rue Belle-Image, Nantes" loading="lazy"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-1.5582%2C47.2129%2C-1.5503%2C47.2170&layer=mapnik&marker=47.2149635%2C-1.5542799"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="rev">
+      <p class="eyebrow">Questions fréquentes</p>
+      <h2 style="margin-top:26px">Bon <em>à savoir.</em></h2>
+    </div>
+    <div class="questions rev d1">
+      <details><summary>Combien coûte une coiffure ?</summary><p>Le prix dépend de la longueur et du style choisis. Envoyez-nous une photo sur WhatsApp : on vous donne le tarif exact avant votre venue.</p></details>
+      <details><summary>Comment prendre rendez-vous ?</summary><p>Le plus simple : un message sur WhatsApp au 06 67 28 83 72. On vous propose un créneau qui vous arrange.</p></details>
+      <details><summary>Vous coiffez aussi les hommes ?</summary><p>Oui. Le salon accueille les femmes comme les hommes.</p></details>
+      <details><summary>Puis-je acheter une perruque ou des mèches sans prestation ?</summary><p>Oui. La boutique est ouverte à tous : venez voir et choisir sur place, on vous conseille.</p></details>
+      <details><summary>Quand êtes-vous ouverts ?</summary><p>Du lundi au samedi, de 10 h à 19 h. Fermé le dimanche.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact grain">
+  <div class="wrap rev">
+    <p class="eyebrow">Rendez-vous</p>
+    <h2>Votre prochaine<br><em>couronne.</em></h2>
+    <p>Un message sur WhatsApp suffit. Dites-nous ce que vous voulez, on vous propose un créneau.</p>
+    <div class="actions">
+      <a class="btn btn-or js-wa" href="https://wa.me/33667288372">Réserver sur WhatsApp
+        <svg class="fleche" viewBox="0 0 22 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h20M16 1l4 4-4 4"/></svg></a>
+      <a class="btn btn-cadre" href="tel:+33667288372">06 67 28 83 72</a>
+    </div>
+    <div class="reseaux">
+      <a href="https://www.instagram.com/oghaircastle1/" target="_blank" rel="noopener">Instagram · @oghaircastle1</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=1+rue+Belle-Image+44000+Nantes" target="_blank" rel="noopener">1 rue Belle-Image</a>
+    </div>
+  </div>
+</section>
+
+<section class="mentions" id="mentions">
+  <div class="wrap">
+    <details>
+      <summary>Mentions légales</summary>
+      <div class="texte">
+        <div><h4>Éditeur du site</h4>OG HAIR CASTLE, société par actions simplifiée (SAS)<br>Siège : 1 rue Belle-Image, 44000 Nantes<br>SIREN 979 873 700 · SIRET 979 873 700 00012<br><!-- À COMPLÉTER avec le client : capital social, RCS, n° TVA intracommunautaire, e-mail -->Téléphone : 06 67 28 83 72</div>
+        <div><h4>Directeur de la publication</h4>Confidence Osazuwa</div>
+        <div><h4>Hébergement</h4>Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis</div>
+        <div><h4>Conception</h4>A2</div>
+        <div><h4>Photos</h4>Les photos de ce site sont des images d'illustration.</div>
+        <div><h4>Données personnelles</h4>Ce site ne dépose pas de cookie publicitaire et ne contient aucun formulaire. Les messages envoyés via WhatsApp sont traités uniquement pour répondre à votre demande de rendez-vous. La carte est fournie par OpenStreetMap.</div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"><b>OG</b> Hair <i>Castle</i></span>
+    <span>© OG Hair Castle · Nantes</span>
+    <span><a href="#mentions" id="lien-mentions">Mentions légales</a> · Site par A2</span>
+  </div>
+</footer>
+
+<a class="flottant js-wa" href="https://wa.me/33667288372" aria-label="Écrire sur WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+  // Message WhatsApp pré-rempli
+  var msg = encodeURIComponent("Bonjour OG Hair Castle, je voudrais prendre rendez-vous.");
+  document.querySelectorAll('.js-wa').forEach(function(a){ a.href = "https://wa.me/33667288372?text=" + msg; a.target = "_blank"; a.rel = "noopener"; });
+
+  // En-tête : transparent sur le héros, plein après
+  var entete = document.getElementById('entete');
+  function majEntete(){ entete.classList.toggle('plein', window.scrollY > window.innerHeight * 0.75); }
+  window.addEventListener('scroll', majEntete, {passive:true}); majEntete();
+
+  // Le lien « Mentions légales » ouvre le bloc
+  document.getElementById('lien-mentions').addEventListener('click', function(){ document.querySelector('#mentions details').open = true; });
+
+  // Ouvert / fermé (heure de Paris)
+  (function(){
+    var p = new Intl.DateTimeFormat('fr-FR',{timeZone:'Europe/Paris',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var jours = {dim:0,lun:1,mar:2,mer:3,jeu:4,ven:5,sam:6};
+    var wd = jours[(p.find(function(x){return x.type==='weekday'}).value||'').slice(0,3).toLowerCase()];
+    var h = +p.find(function(x){return x.type==='hour'}).value, m = +p.find(function(x){return x.type==='minute'}).value;
+    var t = h*60+m, ouvert = wd>=1 && wd<=6 && t>=600 && t<1140;
+    var el = document.getElementById('ouvert');
+    el.classList.toggle('oui', ouvert);
+    el.querySelector('b').textContent = ouvert ? "Ouvert" : "Fermé";
+    var li = document.querySelector('#horaires li[data-j="'+wd+'"]'); if(li) li.classList.add('auj');
+  })();
+
+  // Apparitions au défilement
+  var cibles = document.querySelectorAll('.rev, .devoile');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('vu'); io.unobserve(e.target); } }); },{threshold:.15});
+    cibles.forEach(function(el){ io.observe(el); });
+  } else { cibles.forEach(function(el){ el.classList.add('vu'); }); }
+</script>
+</body>
+</html>
