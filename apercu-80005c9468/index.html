@@ -336,7 +336,7 @@
         <li><a href="#infos">Accès</a></li>
       </ul>
     </nav>
-    <a class="btn btn-or js-wa" href="https://wa.me/33667288372">Rendez-vous</a>
+    <a class="btn btn-or js-wa js-resa" href="https://wa.me/33667288372">Rendez-vous</a>
   </div>
 </header>
 
@@ -351,7 +351,7 @@
     </h1>
     <p class="lead fondu">Perruques, mèches, pose, tissage et tresses. Pour elle comme pour lui, au cœur de Nantes.</p>
     <div class="actions fondu d2">
-      <a class="btn btn-or js-wa" href="https://wa.me/33667288372">Réserver sur WhatsApp
+      <a class="btn btn-or js-wa js-resa" href="https://wa.me/33667288372"><span class="js-resa-texte">Réserver sur WhatsApp</span>
         <svg class="fleche" viewBox="0 0 22 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h20M16 1l4 4-4 4"/></svg></a>
       <a class="btn btn-cadre" href="#prestations">Découvrir</a>
     </div>
@@ -489,7 +489,8 @@
     </div>
     <div class="questions rev d1">
       <details><summary>Combien coûte une coiffure ?</summary><p>Le prix dépend de la longueur et du style choisis. Envoyez-nous une photo sur WhatsApp : on vous donne le tarif exact avant votre venue.</p></details>
-      <details><summary>Comment prendre rendez-vous ?</summary><p>Le plus simple : un message sur WhatsApp au 06 67 28 83 72. On vous propose un créneau qui vous arrange.</p></details>
+      <details><summary>Comment prendre rendez-vous ?</summary><p class="sans-resa">Le plus simple : un message sur WhatsApp au 06 67 28 83 72. On vous propose un créneau qui vous arrange.</p><p class="avec-resa" hidden>En ligne, avec le bouton « Réserver » : vous choisissez votre coiffure et votre créneau, puis vous versez un petit acompte pour le bloquer. Vous pouvez aussi nous écrire sur WhatsApp au 06 67 28 83 72.</p></details>
+      <details class="avec-resa" hidden><summary>Pourquoi un acompte ?</summary><p>L'acompte bloque votre créneau rien que pour vous. Son montant et les conditions d'annulation sont indiqués au moment de réserver.</p></details>
       <details><summary>Vous coiffez aussi les hommes ?</summary><p>Oui. Le salon accueille les femmes comme les hommes.</p></details>
       <details><summary>Puis-je acheter une perruque ou des mèches sans prestation ?</summary><p>Oui. La boutique est ouverte à tous : venez voir et choisir sur place, on vous conseille.</p></details>
       <details><summary>Quand êtes-vous ouverts ?</summary><p>Du lundi au samedi, de 10 h à 19 h. Fermé le dimanche.</p></details>
@@ -501,9 +502,10 @@
   <div class="wrap rev">
     <p class="eyebrow">Rendez-vous</p>
     <h2>Votre prochaine<br><em>couronne.</em></h2>
-    <p>Un message sur WhatsApp suffit. Dites-nous ce que vous voulez, on vous propose un créneau.</p>
+    <p class="sans-resa">Un message sur WhatsApp suffit. Dites-nous ce que vous voulez, on vous propose un créneau.</p>
+    <p class="avec-resa" hidden>Choisissez votre coiffure et votre créneau en ligne. Un petit acompte bloque votre rendez-vous. Une question ? Écrivez-nous sur WhatsApp.</p>
     <div class="actions">
-      <a class="btn btn-or js-wa" href="https://wa.me/33667288372">Réserver sur WhatsApp
+      <a class="btn btn-or js-wa js-resa" href="https://wa.me/33667288372"><span class="js-resa-texte">Réserver sur WhatsApp</span>
         <svg class="fleche" viewBox="0 0 22 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h20M16 1l4 4-4 4"/></svg></a>
       <a class="btn btn-cadre" href="tel:+33667288372">06 67 28 83 72</a>
     </div>
@@ -546,6 +548,16 @@
   // Message WhatsApp pré-rempli
   var msg = encodeURIComponent("Bonjour OG Hair Castle, je voudrais prendre rendez-vous.");
   document.querySelectorAll('.js-wa').forEach(function(a){ a.href = "https://wa.me/33667288372?text=" + msg; a.target = "_blank"; a.rel = "noopener"; });
+
+  // Réservation en ligne avec acompte (JustBraid).
+  // Mettre ici le lien de la page JustBraid du salon (ex. "https://xxxx.justbraid.com"). Vide = tout passe par WhatsApp.
+  var LIEN_RESERVATION = "";
+  if (LIEN_RESERVATION) {
+    document.querySelectorAll('.js-resa').forEach(function(a){ a.href = LIEN_RESERVATION; a.target = "_blank"; a.rel = "noopener"; });
+    document.querySelectorAll('.js-resa-texte').forEach(function(t){ t.textContent = "Réserver en ligne"; });
+    document.querySelectorAll('.avec-resa').forEach(function(e){ e.hidden = false; });
+    document.querySelectorAll('.sans-resa').forEach(function(e){ e.hidden = true; });
+  }
 
   // En-tête : transparent sur le héros, plein après
   var entete = document.getElementById('entete');
